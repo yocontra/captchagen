@@ -22,10 +22,6 @@
 NOTHING HERE YET
 ```
 
-## Examples
-
-You can view more examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
-
 ## LICENSE
 
 (MIT License)
