@@ -1,14 +1,14 @@
-![status](https://secure.travis-ci.org/wearefractal/APPNAME.png?branch=master)
+![status](https://secure.travis-ci.org/wearefractal/captchagen.png?branch=master)
 
 ## Information
 
 <table>
 <tr> 
-<td>Package</td><td>APPNAME</td>
+<td>Package</td><td>captchagen</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>NOTHING HERE YET</td>
+<td>Captcha image generator</td>
 </tr>
 <tr>
 <td>Node Version</td>
@@ -16,10 +16,18 @@
 </tr>
 </table>
 
+![example](http://i.imgur.com/ASDf4.png)
+
 ## Usage
 
 ```coffee-script
-NOTHING HERE YET
+c = require 'captchagen'
+
+captcha = c.generate()
+
+captcha.text() # Outputs captcha text (6 chars by default)
+captcha.uri() # Outputs png data uri - optional callback for async
+captcha.buffer() # Outputs node buffer - optional callback for async
 ```
 
 ## LICENSE
