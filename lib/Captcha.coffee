@@ -1,3 +1,5 @@
+{speak} = require 'espeak'
+
 class Captcha
   constructor: (@_canvas, @_text) ->
 
@@ -13,5 +15,9 @@ class Captcha
       return @_canvas.createJPEGStream()
     else
       throw new Error "Invalid stream type"
+  audio: (args..., cb) =>
+    args = if args.length then args[0] else ['-s 90', '-g 20', '-p 50']
+    textSpaced = @_text.replace /\w/g, '$& '
+    speak textSpaced, args, cb
 
 module.exports = Captcha
