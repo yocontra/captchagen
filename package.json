@@ -9,17 +9,18 @@
    
    "dependencies":{
       "coffee-script":"*",
-      "canvas":"*"
+      "canvas":"*",
+      "espeak":"*"
    },
    "devDependencies":{
       "mocha":"*",
       "should":"*"
    },
    "scripts":{
-      "test":"mocha --compilers coffee:coffee-script"
+      "test":"mocha"
    },
    "engines":{
-      "node":">= 0.4.0"
+      "node":">=0.6.x"
    },
    "licenses":[
       {
