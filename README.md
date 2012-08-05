@@ -12,7 +12,7 @@
 </tr>
 <tr>
 <td>Node Version</td>
-<td>>= 0.6.0</td>
+<td>>= 0.6</td>
 </tr>
 </table>
 
@@ -26,8 +26,10 @@ c = require 'captchagen'
 captcha = c.generate()
 
 captcha.text() # Outputs captcha text (6 chars by default)
-captcha.uri() # Outputs png data uri - optional callback for async (synchronous broken in node v0.8.x)
-captcha.buffer() # Outputs node buffer - optional callback for async
+captcha.uri() # Outputs png data uri - optional callback param for async (mandatory in node >=0.8)
+captcha.buffer() # Outputs node buffer - optional callback param for async
+
+# Audio via espeak (thanks @freewil)
 captcha.audio (err, wav) ->
   wav.toDataUri() # Outputs wav data uri
   wav.buffer # Outputs node buffer
