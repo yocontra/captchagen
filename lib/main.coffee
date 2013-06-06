@@ -3,10 +3,11 @@ Captcha = require "./Captcha"
 
 module.exports =
   generate: (opt={}) ->
-    {height,width,text} = opt
+    {height,width,text,font} = opt
     height ?= 150
     width ?= 300
     text ?= (((1 + Math.random()) * 0x10000000) | 0).toString 32
+    font ?= "sans"
 
     randomColor = -> Math.floor Math.random()*255
     colors = (r:randomColor(),g:randomColor(),b:randomColor() for num in [0..7])
@@ -22,7 +23,7 @@ module.exports =
     x = 5
     for letter, idx in text
       size = Math.floor(Math.random()*60)+50
-      ctx.font = "#{size}px sans"
+      ctx.font = "#{size}px #{font}"
       ctx.textBaseline = "top"
       te = ctx.measureText letter
       y = Math.floor (((Math.random()*height-size)/100)+size/3)
