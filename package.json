@@ -1,7 +1,7 @@
 {
    "name":"captchagen",
    "description":"Captcha generator",
-   "version":"0.0.2",
+   "version":"0.0.3",
    "homepage":"http://github.com/wearefractal/captchagen",
    "repository":"git://github.com/wearefractal/captchagen.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
