@@ -1,28 +1,31 @@
 captchagen = require '../'
 should = require 'should'
+open = require 'open'
 require 'mocha'
 
 describe 'text()', ->
   it 'should return the input value', (done) ->
-    captcha = captchagen.generate text: 'test'
+    captcha = captchagen.create text: 'test'
     captcha.text().should.equal 'test'
     done()
 
 describe 'uri()', ->
-  # synchronous broken in node 0.8.x
-  # see: https://github.com/LearnBoost/node-canvas/issues/182
   it 'should work synchronously', (done) ->
-    captcha = captchagen.generate()
+    captcha = captchagen.create()
+    captcha.generate()
     uri = captcha.uri()
+    console.log uri
     should.exist uri
     done()
-    
+
+###
 describe 'audio()', ->
   it 'should give wav object', (done) ->
-    captcha = captchagen.generate()
+    captcha = captchagen.create()
     captcha.audio (err, wav) ->
       should.not.exist err
       should.exist wav
       should.exist wav.buffer
       should.exist wav.toDataUri()
       done()
+###

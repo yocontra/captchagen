@@ -21,12 +21,26 @@
 ## Usage
 
 ```coffee-script
-c = require 'captchagen'
+captcha = require 'captchagen'
 
-captcha = c.generate()
+cap = c.create(opt)
 
-captcha.text() # Outputs captcha text (6 chars by default)
-captcha.uri() # Outputs png data uri - optional callback param for async (mandatory in node >=0.8)
+###
+Valid options:
+
+height, width, text, font
+###
+
+captcha.text() # Returns captcha text (6 chars by default)
+captcha.height() # Returns captcha height
+captcha.width() # Returns captcha height
+captcha.font() # Returns captcha font
+
+captcha.generate() # Generates the canvas image
+
+# !!! You need to generate the image before doing any of the following ops
+
+captcha.uri() # Outputs png data uri - optional callback param for async
 captcha.buffer() # Outputs node buffer - optional callback param for async
 
 # Audio via espeak (thanks @freewil)
@@ -34,6 +48,20 @@ captcha.audio (err, wav) ->
   wav.toDataUri() # Outputs wav data uri
   wav.buffer # Outputs node buffer
 ```
+
+## Middleware
+
+The whole thing is a middleware stack. By default the stack is 
+
+```coffee-script
+cap.use drawBackground
+cap.use drawLines
+cap.use drawText
+cap.use drawLines
+```
+
+To add your own look at the middle folder in lib. You take a canvas in, modify it, and output it again. Simple stuff.
+
 
 ## LICENSE
 

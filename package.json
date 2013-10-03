@@ -1,7 +1,7 @@
 {
    "name":"captchagen",
    "description":"Captcha generator",
-   "version":"0.0.3",
+   "version":"1.0.0",
    "homepage":"http://github.com/wearefractal/captchagen",
    "repository":"git://github.com/wearefractal/captchagen.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
@@ -14,7 +14,8 @@
    },
    "devDependencies":{
       "mocha":"*",
-      "should":"*"
+      "should":"*",
+      "open":"*"
    },
    "scripts":{
       "test":"mocha"
