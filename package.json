@@ -8,15 +8,14 @@
    "main":"./index.js",
    
    "dependencies":{
-      "canvas":"*",
-      "espeak":"*"
+      "canvas":"*"
    },
    "devDependencies":{
       "mocha":"*",
       "should":"*"
    },
    "scripts":{
-      "test":"mocha"
+      "test":"mocha --reporter spec"
    },
    "engines":{
       "node":">=0.6"
