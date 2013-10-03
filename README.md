@@ -16,7 +16,7 @@
 </tr>
 </table>
 
-![example](http://i.imgur.com/ASDf4.png)
+![example](https://i.cloudup.com/j5gB0Piif2-3000x3000.png)
 
 ## Usage
 
