@@ -18,7 +18,6 @@ describe('uri()', function() {
     var captcha = captchagen.create();
     captcha.generate();
     var uri = captcha.uri();
-    console.log(uri);
     should.exist(uri);
     done();
   });
