@@ -18,6 +18,10 @@
 
 ![example](https://i.cloudup.com/j5gB0Piif2-3000x3000.png)
 
+## Dependencies
+
+This relies on a native module called node-canvas. You will need to install cairo, so read https://github.com/learnboost/node-canvas/wiki before installing.
+
 ## Usage
 
 ```javascript
