@@ -2,6 +2,7 @@ var Captcha = require('./lib/Captcha');
 var drawBackground = require('./lib/middle/drawBackground');
 var drawText = require('./lib/middle/drawText');
 var drawLines = require('./lib/middle/drawLines');
+var drawNoise = require('./lib/middle/drawNoise');
 
 var getColors = require('./lib/getColors');
 var getFontSize = require('./lib/getFontSize');
@@ -14,6 +15,7 @@ module.exports = {
   drawBackground: drawBackground,
   drawText: drawText,
   drawLines: drawLines,
+  drawNoise: drawNoise,
 
   // utils
   getColors: getColors,
@@ -26,6 +28,7 @@ module.exports = {
     cap.use(drawBackground);
     cap.use(drawLines);
     cap.use(drawText);
+    cap.use(drawNoise);
     cap.use(drawLines);
     return cap;
   }
