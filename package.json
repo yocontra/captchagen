@@ -1,7 +1,7 @@
 {
    "name":"node-captchagen",
    "description":"Captcha generator",
-   "version":"1.2.0",
+   "version":"1.2.1",
    "homepage":"http://github.com/eidonjoe/captchagen",
    "repository":"git://github.com/eidonjoe/captchagen.git",
    "author":"https://github.com/eidonjoe",
