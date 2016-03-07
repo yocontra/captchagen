@@ -1,10 +1,10 @@
 {
-   "name":"captchagen",
+   "name":"node-captchagen",
    "description":"Captcha generator",
-   "version":"1.1.0",
-   "homepage":"http://github.com/wearefractal/captchagen",
-   "repository":"git://github.com/wearefractal/captchagen.git",
-   "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+   "version":"1.2.0",
+   "homepage":"http://github.com/eidonjoe/captchagen",
+   "repository":"git://github.com/eidonjoe/captchagen.git",
+   "author":"https://github.com/eidonjoe",
    "main":"./index.js",
    
    "dependencies":{
