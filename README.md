@@ -26,28 +26,31 @@ This relies on a native module called node-canvas. You will need to install cair
 ## Usage
 
 ```javascript
-	var optional = {
-		height: 150, // default is 150
-		width: 300, // dafault is 300
-		text: 'abc123', // default is six random characters
-		backgroundColor: '#EF766A', // default is a random gradient color
-		// textColor: '#000', // default is a random color every letter
-		font: ' Microsoft YaHei', // default is 'sans'
-		fontsize: 70, // default between 0.4*height and 0.6*height
-		offset: 50, // default is 3
-		img: img // default is none
-	}
-	// optional object arg with background, image, lines, points ,text will always output.
-	var drawOption = {drawBackground: true,drawImage: false,drawLines: true,drawPoints: true}; 
-	var captcha = captchagen.create(optional,drawOption);
-	captcha.generate(); // Draws the image to the canvas
+var captchagen = require('captchagen');
+var fs = require('fs');
+var img = fs.readFileSync('example.png');
+var optional = {
+	height: 150, // default is 150
+	width: 300, // dafault is 300
+	text: 'abc123', // default is six random characters
+	backgroundColor: '#EF766A', // default is a random gradient color
+	// textColor: '#000', // default is a random color every letter
+	font: ' Microsoft YaHei', // default is 'sans'
+	fontsize: 70, // default between 0.4*height and 0.6*height
+	offset: 50, // default is 3
+	img: img // default is none
+}
+// optional object arg with background, image, lines, points ,text will always output.
+var drawOption = {drawBackground: true,drawImage: false,drawLines: true,drawPoints: true}; 
+var captcha = captchagen.create(optional,drawOption);
+captcha.generate(); // Draws the image to the canvas
 
-	/* call `generate()` before running the below */
+/* call `generate()` before running the below */
 
-	captcha.uri();      // outputs png data-uri. works sync and async (cb is optional)
-	captcha.buffer();   // outputs png buffer. works sync and async (cb is optional)
-	captcha.buffer('png'); // outputs an image stream. type can be either png or jpeg (png is the default)
-	res.end(captcha.buffer()); // output image or base64 
+captcha.uri();      // outputs png data-uri. works sync and async (cb is optional)
+captcha.buffer();   // outputs png buffer. works sync and async (cb is optional)
+captcha.buffer('png'); // outputs an image stream. type can be either png or jpeg (png is the default)
+res.end(captcha.buffer()); // output image or base64 
 ```
 
 ## Middleware
