@@ -25,7 +25,7 @@ module.exports = {
   generateText: generateText,
   
   // use default settings
-  create: function (opt,drawArguments) {
+  create: function (opt, drawArguments) {
     var cap = new Captcha(opt);
     var obj = drawArguments || {};
 

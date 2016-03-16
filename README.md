@@ -26,7 +26,7 @@ This relies on a native module called node-canvas. You will need to install cair
 ## Usage
 
 ```javascript
-var captchagen = require('node-captchagen');
+var captchagen = require('captchagen');
 var fs = require('fs');
 var img = fs.readFileSync('example.png');
 var optional = {
