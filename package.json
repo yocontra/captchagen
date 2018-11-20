@@ -8,7 +8,7 @@
    "main":"./index.js",
    
    "dependencies":{
-      "canvas":"*"
+      "canvas":"^1.6.9"
    },
    "devDependencies":{
       "mocha":"*",
